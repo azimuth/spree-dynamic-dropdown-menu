@@ -59,4 +59,17 @@ INSTALL
   `<%= dynamic_dropdown_menu %>`
 
 * TODO: go to the admin and start creating menus
-  WORKAROUND: open script/console and create the menus manually.
+* WORKAROUND: open script/console and create the menus manually.
+
+   `Menu.create :link_text => "blah", :url => "/blah", :position => 12, :visible => true, :parent_id => 3`
+
+* TODO: add :visible to the `menus.find` call, so that the implied functionality actually exists:
+
+    `Given a valid, saved Menu instance with 'visible == true'
+     When I go to a page with a dynamic_dropdown_menu() call
+     Then the menu item should display`
+
+     `Given a valid saved Menu instance with 'visible == false'
+      When I go to a page with a dynamic_dropdown_menu() call
+      Then the menu item should not display`
+    
