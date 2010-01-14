@@ -26,7 +26,7 @@ INSTALL
 * `rake db:migrate`
 * add css to your theme extension css files to theme a block such as this:
 
-	`<div id="menu">
+`
 	  <ul>
 	    <li class="headlink">
 	      <a href="/">Home</a>
@@ -52,7 +52,7 @@ INSTALL
 	      </ul>
 	    </li>
 	  </ul>
-	</div>`
+`
 
 * place your menu in your layout using the following helper code:
 
@@ -65,11 +65,13 @@ INSTALL
 
 * TODO: add :visible to the `menus.find` call, so that the implied functionality actually exists:
 
-    `Given a valid, saved Menu instance with 'visible == true'
+`
+     Given a valid, saved Menu instance with 'visible == true'
      When I go to a page with a dynamic_dropdown_menu() call
-     Then the menu item should display`
-
-     `Given a valid saved Menu instance with 'visible == false'
+     Then the menu item should display
+`
+`
+     Given a valid saved Menu instance with 'visible == false'
       When I go to a page with a dynamic_dropdown_menu() call
-      Then the menu item should not display`
-    
+      Then the menu item should not display
+`  
