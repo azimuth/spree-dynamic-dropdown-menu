@@ -1,0 +1,25 @@
+<div id="ddmenu">
+<ul>
+  <% @menus.each do |m| -%>
+    <li class="headlink">
+      <a href="<%=m.url%>"><%= m.link_text%></a>
+      <% if m.children -%>
+        <ul>
+        <% m.children.each do |ch| -%>
+          <li <%= 'class="under_headlink"' if ch.children %>>
+            <a href="<%=ch.url%>"><%=ch.link_text%></a>
+            <% if ch.children -%>
+              <ul>
+	            <% ch.children.each do |uch|-%>
+	              <li><a href="<%=uch.url%>"><%=uch.link_text%></a></li>
+	            <% end -%>
+	          </ul>
+	          <% end -%>
+	      </li>
+        <% end -%>
+        </ul>
+      <% end -%>
+    </li>
+  <% end -%>
+</ul>
+</div>
